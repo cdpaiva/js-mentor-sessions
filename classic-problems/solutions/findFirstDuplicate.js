@@ -13,7 +13,7 @@
  * firstDuplicate([1, 2, 3, 4, 5]);
  * // Returns: -1
  */
-function firstDuplicate(arr) {
+function findFirstDuplicate(arr) {
     const seen = {};
 
     for (let i = 0; i < arr.length; i++) {
