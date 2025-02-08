@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+</head>
+
+<body>
+    <h1>Guess the Number</h1>
+    <p>Range: 1 - 100</p>
+    <input type="text" id="input">
+    <button id="tryBtn">Try</button>
+    <div id="guesses"></div>
+
+    <script>
+        const guesses = document.getElementById('guesses');
+        const target = Math.ceil(Math.random() * 100);
+        // add an event listener
+        const tryBtn = document.getElementById('tryBtn');
+        tryBtn.addEventListener('click', checkGuess);
+        // implement the event handler
+        function checkGuess() {
+            // we need to get the value inside the text input
+            const userInput = document.getElementById('input');
+            // convert from string to number
+            const guess = parseInt(userInput.value);
+            // compare both values
+            let msg = '';
+            if (target === guess) {
+                msg = 'Congratulations! The number was: ' + guess;
+            } else if (guess < target) {
+                msg = 'Guess is too low: ' + guess;
+            } else if (guess > target) {
+                msg = 'Guess is too high: ' + guess;
+            }
+            // display the result of the comparison
+            const p = document.createElement('p');
+            p.textContent = msg;
+            guesses.appendChild(p);
+        }
+    </script>
+</body>
+
+</html>
