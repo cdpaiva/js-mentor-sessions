@@ -1,0 +1,39 @@
+body {
+    background-color: #1a1a1a;
+    color: aliceblue;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.row-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.lang-table {
+    width: 100%;
+}
+
+.row-group + td {
+    color: goldenrod;
+}
+
+.row-group + td + td {
+    color: gray;
+}
+
+.row-group + td + td + td {
+    color: saddlebrown;
+}
+
+.sort-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
