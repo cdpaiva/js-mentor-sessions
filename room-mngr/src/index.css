@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+    text-align: center;
+}
+
+.room-card {
+    max-width: 400px;
+    background-color: aliceblue;
+    padding: 0.5rem;
+    margin: 0.5rem auto;
+    border: 1px solid black;
+}
+
+.room-card-top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.room-card-preview {
+    background-color: cornflowerblue;
+    padding: 1rem;
+}
+
+.room-not-ready {
+    background-color: orangered;
+}
+
+.create-room-form {
+    border: 1px solid rebeccapurple;
+    max-width: 400px;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    gap: 1rem;
+}
+
+.create-room-control {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+}
+
+.create-room-control input {
+    flex-grow: 1;
+}
