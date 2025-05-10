@@ -1,0 +1,67 @@
+body {
+    text-align: center;
+}
+
+button {
+    margin-inline: 1rem;
+}
+
+.container {
+    height: 200 vh;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.spacer {
+    height: 150vh;
+}
+
+.light {
+    background-color: azure;
+    color: black;
+}
+
+.dark {
+    background-color: #3e3e3e;
+    color: goldenrod;
+}
+
+.target-btn {
+    padding: 1rem;
+    background-color: tomato;
+    color: black;
+    text-align: center;
+    margin-block: 2rem;
+}
+
+.fade-effect {
+    animation: flash 5s ease;
+}
+
+.pulse-effect {
+    animation: pulse-bg 1s ease;
+}
+
+@keyframes pulse-bg {
+    0% {
+        transform: scale(1);
+        background-color: inherit;
+    }
+    50% {
+        transform: scale(1.02);
+        background-color: #ffefba;
+    }
+    100% {
+        transform: scale(1);
+        background-color: inherit;
+    }
+}
+
+@keyframes flash {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
