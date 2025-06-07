@@ -12,15 +12,21 @@
     <p>Range: 1 - 100</p>
     <input type="text" id="input">
     <button id="tryBtn">Try</button>
+    <button id="resetBtn">Reset</button>
     <div id="guesses"></div>
 
     <script>
         const guesses = document.getElementById('guesses');
         const target = Math.ceil(Math.random() * 100);
-        // add an event listener
+
+        // add an event listeners
         const tryBtn = document.getElementById('tryBtn');
         tryBtn.addEventListener('click', checkGuess);
-        // implement the event handler
+
+        const resetBtn = document.getElementById('resetBtn');
+        resetBtn.addEventListener('click', resetGuesses);
+
+        // implement the event handlers
         function checkGuess() {
             // we need to get the value inside the text input
             const userInput = document.getElementById('input');
@@ -39,6 +45,15 @@
             const p = document.createElement('p');
             p.textContent = msg;
             guesses.appendChild(p);
+        }
+
+        function resetGuesses() {
+            const currentGuesses = document.getElementById('guesses');
+            while (guesses.firstChild !== null) {
+                guesses.removeChild(guesses.firstChild);
+            }
+            const userInput = document.getElementById('input');
+            userInput.value = '';
         }
     </script>
 </body>
