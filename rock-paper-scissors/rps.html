@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    <script>
+        function getComputerChoice() {
+            const choices = ["rock", "paper", "scissors"];
+            const index = Math.floor(Math.random() * choices.length);
+            return choices[index];
+        }
+
+        function getWinner(player, computer) {
+            if (player === computer) return "It's a tie!";
+            if (
+                (player === "rock" && computer === "scissors") ||
+                (player === "paper" && computer === "rock") ||
+                (player === "scissors" && computer === "paper")
+            ) {
+                return "You win!";
+            }
+            return "You lose!";
+        }
+
+        function playGame() {
+            alert("Welcome to Rock, Paper, Scissors!");
+
+            while (true) {
+                const player = prompt("Choose rock, paper, or scissors:").toLowerCase();
+                const valid = ["rock", "paper", "scissors"];
+
+                if (!valid.includes(player)) {
+                    alert("Invalid input. Try again.");
+                    continue;
+                }
+
+                const computer = getComputerChoice();
+                alert("Computer chose: " + computer);
+
+                const result = getWinner(player, computer);
+                alert(result);
+
+                const again = prompt("Play again? (yes/no):").toLowerCase();
+                if (again !== "yes") {
+                    break;
+                }
+            }
+
+            alert("Thanks for playing!");
+        }
+
+        playGame();
+    </script>
+</body>
+
+</html>
