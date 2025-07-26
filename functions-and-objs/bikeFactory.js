@@ -2,8 +2,7 @@ const bikeFactory = (function createBikeFactory() {
     let nextId = 0;
 
     function getId() {
-        nextId++;
-        return nextId;
+        return nextId++;
     }
 
     return {
@@ -23,7 +22,7 @@ const bikeFactory = (function createBikeFactory() {
 })();
 
 const cyclist = {
-    bike: {},
+    bike: null,
     log: [],
     rideBike: function (place, distance) {
         this.log.push({ place, distance });
@@ -44,8 +43,8 @@ function main() {
     const bike = bikeFactory.createBike("trail");
 
     cyclist.bike = bike;
-    cyclist.rideBike("Trail", 10);
-    cyclist.rideBike("Endurance", 40);
+    cyclist.rideBike("Woodlake trail", 10);
+    cyclist.rideBike("Mountain trail loop", 40);
 
     let report = createReport.bind(cyclist, "distance");
 
