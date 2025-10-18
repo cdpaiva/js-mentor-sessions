@@ -7,20 +7,28 @@
  *
  * @example
  * findPairs([5, 5, 8, 1, 3, 2], 10);
- * // Returns: [[5, 5], [8, 2]]
+ *
+ * Returns: [[5, 5], [8, 2]]
+ *
+ * findPairs([2, 2, 2, 2], 4);
+ *
+ * Returns:
+ *
+ * [[2, 2], [2, 2]]
  */
 function findPairs(arr, target) {
     const pairs = [];
     const seen = {};
 
-    for (let i = 0; i < arr.length; i++) {
-        const num = arr[i];
+    for (const num of arr) {
         const complement = target - num;
 
-        if (seen[complement]) {
+        if (seen[complement] > 0) {
             pairs.push([complement, num]);
+            seen[complement]--;
+        } else {
+            seen[num] = (seen[num] || 0) + 1;
         }
-        seen[num] = true;
     }
 
     return pairs;
