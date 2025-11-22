@@ -3,7 +3,7 @@ import { useState } from "react";
 function ListItem({ item, handleRemove }) {
     const [selected, setSelect] = useState(false);
 
-    function toogleSelected(item) {
+    function toogleSelected() {
         setSelect(!selected);
     }
 
