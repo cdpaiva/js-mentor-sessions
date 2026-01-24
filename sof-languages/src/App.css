@@ -21,6 +21,10 @@ thead {
     width: 100%;
 }
 
+.sort-radios {
+    margin-bottom: 1rem;
+}
+
 .add-lang-controls {
     display: flex;
     flex-direction: column;
