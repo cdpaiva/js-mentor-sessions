@@ -7,8 +7,8 @@ function Content() {
     const { theme, toggleTheme } = useContext(ThemeContext);
 
     useEffect(() => {
-        analytics.track("Theme", theme);
-    }, [theme]);
+        analytics.track("Mount", "Content");
+    }, []);
 
     const handleScroll = () => {
         if (boxRef.current) {
