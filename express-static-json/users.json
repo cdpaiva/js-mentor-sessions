@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Alice",
+        "password": "p@ssw0rd1",
+        "age": 25
+    },
+    {
+        "name": "Bob",
+        "password": "secure123",
+        "age": 30
+    },
+    {
+        "name": "Charlie",
+        "password": "letmein",
+        "age": 22
+    },
+    {
+        "name": "David",
+        "password": "dav1dP@ss",
+        "age": 28
+    },
+    {
+        "name": "Eve",
+        "password": "eveSecur3",
+        "age": 35
+    },
+    {
+        "name": "Frank",
+        "password": "fr@nk1nG",
+        "age": 29
+    },
+    {
+        "name": "Grace",
+        "password": "gracefu1!",
+        "age": 31
+    },
+    {
+        "name": "Henry",
+        "password": "h3nryP@ss",
+        "age": 27
+    },
+    {
+        "name": "Isabel",
+        "password": "is@b3lR0cks",
+        "age": 26
+    },
+    {
+        "name": "Jack",
+        "password": "j@ckSp@rrow",
+        "age": 33
+    }
+]
